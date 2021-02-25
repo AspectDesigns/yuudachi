@@ -4,6 +4,7 @@ import { Message, User } from "discord.js";
 import { CommandHandler, ListenerHandler } from "discord-akairo";
 import { OWNERS, PREFIX } from "../Config";
 import { Listener } from "discord-akairo";
+import { TriggerEvent } from "../Auto/TriggerEvent";
 
 declare module "discord-akairo" {
     interface AkairoClient {
@@ -43,9 +44,5 @@ export default class BotClient extends AkairoClient {
 
         this.commandHandler.loadAll();
         this.listenerHandler.loadAll();
-
-        this.listenerHandler.on("load", (listener: Listener) => {
-            console.log(`Loaded`)
-        })
     }
 }
