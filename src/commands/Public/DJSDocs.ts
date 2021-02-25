@@ -6,8 +6,8 @@ import * as request from "request";
 
 export default class DocsCommand extends Command {
     public constructor() {
-        super("docs", {
-            aliases: ["docs"],
+        super("djsdocs", {
+            aliases: ["djsdocs"],
             args: [
                 {
                     id: "query",
@@ -22,7 +22,7 @@ export default class DocsCommand extends Command {
                     id: "src",
                     type: "string",
                     flag: ["--src="],
-                    default: "akairo-master"
+                    default: "master"
                 }
             ],
             ownerOnly: true
