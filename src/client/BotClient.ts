@@ -29,6 +29,8 @@ export default class BotClient extends AkairoClient {
         handleEdits: true,
         commandUtilLifetime: 3e5,
         prefix: PREFIX,
+        ignorePermissions: OWNERS,
+        ignoreCooldown: OWNERS,
     });
 
     listenerHandler: ListenerHandler = new ListenerHandler(this, {

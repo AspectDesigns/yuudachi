@@ -6,7 +6,7 @@ import { GuildMember } from "discord.js";
 import { Message } from "discord.js";
 import { OWNERS } from "../../Config";
 
-export default class PTSCommand extends Command {
+export default class extends Command {
     public constructor() {
         super("pts", {
             aliases: ["pts", "permissiontospeak"],
